@@ -1,2 +1,2 @@
 # hello-world
-My demo application
+My demo application ... and some more about my application...
