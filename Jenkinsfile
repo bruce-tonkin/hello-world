@@ -8,7 +8,7 @@ agent any
   switch(ENV) {
     case "Delivery":
       echo 'Building Delivery';
-      env.SDLC = 'delivery';
+      env.SDLC = 'dlvr';
       break;
     case "Test":
       echo 'Building Test';
@@ -16,7 +16,7 @@ agent any
       break;
     case "Production":
       echo 'Building Production';
-      env.SDLC = 'production';
+      env.SDLC = 'prod';
       break;
     default:
       echo 'Nothing selected';
