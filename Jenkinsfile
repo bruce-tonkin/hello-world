@@ -7,7 +7,6 @@ node ('geoservertest') {
         case "Delivery":
           echo "Building dlvr"
           env.SDLC = 'dlvr'
-          echo ${env.SDLC}
         break
         case "Test":
           echo "Building test"
