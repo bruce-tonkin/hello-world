@@ -5,7 +5,7 @@ agent any
     string(name: 'SDLC', defaultValue: 'Delivery', description: 'What environment should this be run against?')
   }
 
-  switch (ENV) {
+  switch(ENV) {
     case "Delivery":
       echo 'Building Delivery';
       env.SDLC = 'delivery';
