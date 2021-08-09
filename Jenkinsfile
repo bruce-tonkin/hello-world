@@ -22,7 +22,7 @@ node ('geoservertest') {
     }
   } catch (e) {
                 currentBuild.result = "FAILED"
-                notifyFailed()
+//                notifyFailed()
                 throw e
     }
 }
