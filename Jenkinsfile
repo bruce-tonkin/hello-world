@@ -1,5 +1,5 @@
 pipeline {
-  agent {kurhah.dmz}
+  agent any
   parameters {
         string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     }
