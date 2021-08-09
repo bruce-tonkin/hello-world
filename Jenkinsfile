@@ -5,19 +5,22 @@ agent any
     string(name: 'SDLC', defaultValue: 'Delivery', description: 'What environment should this be run against?')
   }
 
-//  switch (ENV) {
-//    case "Delivery":
-//      echo 'Building Delivery'  
-//      break
-//    case "Test":
-//      echo 'Building Test'
-//      break
-//    case "Production":
-//      echo 'Building Production'
-//      break
-//    default:
-//      echo 'Nothing selected'  
-//  }
+  switch (ENV) {
+    case "Delivery":
+      echo 'Building Delivery';
+      env.SDLC = 'delivery';
+      break;
+    case "Test":
+      echo 'Building Test';
+      env.SDLC = 'test';
+      break;
+    case "Production":
+      echo 'Building Production';
+      env.SDLC = 'production';
+      break;
+    default:
+      echo 'Nothing selected';
+  }
 
   stages {
     stage("build") {
