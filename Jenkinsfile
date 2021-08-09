@@ -1,7 +1,6 @@
 pipeline {
 agent any
   parameters {
-    string(name: 'One', defaultValue: '')
     string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     string(name: 'SDLC', defaultValue: 'Delivery', description: 'What environment should this be run against?')
   }
