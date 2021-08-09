@@ -7,5 +7,9 @@ node ('geoservertest') {
     stage ('SCM prepare'){
       echo 'Building Stage 1'
     }
-  }
+  } catch (e) {
+                currentBuild.result = "FAILED"
+                notifyFailed()
+                throw e
+    }
 }
