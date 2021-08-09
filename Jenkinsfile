@@ -23,6 +23,7 @@ node ('geoservertest') {
   } catch (e) {
                 currentBuild.result = "FAILED"
 //                notifyFailed()
+                echo "Job Failes"
                 throw e
     }
 }
