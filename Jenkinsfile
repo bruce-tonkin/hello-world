@@ -20,6 +20,8 @@ node ('geoservertest') {
           println "That was unexpected"
     }
     echo "This is my echo with ${env.SDLC}"
+    echo "gitTag is ${gitTag}"
+    
     stage ('SCM prepare'){
       echo 'Building Stage 1'
     }
