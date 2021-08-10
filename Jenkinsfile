@@ -10,15 +10,16 @@ node ('geoservertest') {
         break
         case "Test":
           echo "Building test"
-          env.sdlc = 'test'
+          env.SDLC = 'test'
         break
         case "Production":
           echo "Building prod"
-          env.sdlc =  'prod'
+          env.SDLC =  'prod'
         break
         default: 
           println "That was unexpected"
     }
+    echo "This is my echo with ${env.SDLC}"
     stage ('SCM prepare'){
       echo 'Building Stage 1'
     }
