@@ -4,7 +4,8 @@ node ('geoservertest') {
       string(name: 'SDLC', defaultValue: 'dlvr', description: 'What environment should this be run against?')
       string(name: 'APP', defaultValue: 'fcbc'), description: 'Which component do you want to deploy?')
       string(name: 'gitTag', defaultValue: 'master', description: 'The repository version to pull from')      
-    }  
+    }
+    
     switch (ENV) {
         case "Delivery":
           echo "Building dlvr"
@@ -21,8 +22,31 @@ node ('geoservertest') {
         default: 
           println "That was unexpected"
     }
-    echo "This is my echo with ${env.SDLC}"
-    echo "gitTag is ${gitTag}"
+    
+    switch (APP) {
+        case "fcbc":
+          echo "Building fcbc"
+          env.APP = 'fcbc'
+        break
+        case "geocoder":
+          echo "Building geocoder"
+          env.APP = 'geocoder'
+        break
+        case "geomark":
+          echo "Building geomark"
+          env.APP =  'geomark'
+        case "Icons":
+          echo "Building Icons"
+          env.APP =  'Icons'
+        break
+        default: 
+          println "That was unexpected"
+    }
+ 
+    
+    echo "This is my echo with ENV ${env.SDLC}"
+    echo "This is my echo with APP ${env.APP}"
+    echo "This is my echo with gitTag ${gitTag}"
     
     echo "Set variables that can be used in external processes"
     setEnv ([
