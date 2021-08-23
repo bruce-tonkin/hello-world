@@ -35,6 +35,7 @@ node ('geoservertest') {
         case "geomark":
           echo "Building geomark"
           env.APP =  'geomark'
+        break
         case "Icons":
           echo "Building Icons"
           env.APP =  'Icons'
