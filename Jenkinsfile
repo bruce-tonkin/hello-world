@@ -20,7 +20,7 @@ node ('geoservertest') {
           env.SDLC =  'prod'
         break
         default: 
-          println "That was unexpected"
+          println "That was unexpected with variable ENV"
     }
     
     switch (APP) {
@@ -40,7 +40,7 @@ node ('geoservertest') {
           env.APP =  'Icons'
         break
         default: 
-          println "That was unexpected"
+          println "That was unexpected with variable APP"
     }
  
     
