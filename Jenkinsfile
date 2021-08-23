@@ -2,6 +2,7 @@ node ('geoservertest') {
   try {
     parameters {
       string(name: 'SDLC', defaultValue: 'dlvr', description: 'What environment should this be run against?')
+      string(name: 'APP', defaultValue: 'fcbc'), description: 'Which component do you want to deploy?')
       string(name: 'gitTag', defaultValue: 'master', description: 'The repository version to pull from')      
     }  
     switch (ENV) {
