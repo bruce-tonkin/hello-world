@@ -49,14 +49,14 @@ node ('geoservertest') {
     echo "This is my echo with gitTag: ${gitTag}"
     
     echo "Set variables that can be used in external processes"
-    setEnv ([
-      "GIT_SSL_NO_VERIFY=true",
-      "FOLDERNAME=ecocat_${env.PUBORSEC}",
-      "SITENAME=ecocat",
-      "PUBORSEC=${env.PUBORSEC}", 
-      "APPSERVER=${env.APPSERVER}",
-      "SDLC=${env.SDLC}"
-    ])
+//    setEnv ([
+//      "GIT_SSL_NO_VERIFY=true",
+//      "FOLDERNAME=ecocat_${env.PUBORSEC}",
+//      "SITENAME=ecocat",
+//      "PUBORSEC=${env.PUBORSEC}", 
+//      "APPSERVER=${env.APPSERVER}",
+//      "SDLC=${env.SDLC}"
+//    ])
     
     stage ('SCM prepare'){
       echo 'Building Stage 1'
