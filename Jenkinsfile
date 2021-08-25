@@ -47,7 +47,7 @@ node ('geoservertest') {
     
     echo "This is my echo with ENV: ${env.SDLC}"
     echo "This is my echo with APP: ${env.APP}"
-    echo "This is my echo with gitTag: ${gitTag}"
+    echo "This is my echo with gitTag: ${KML_gitTag}"
     
     echo "Set variables that can be used in external processes"
 //    setEnv ([
