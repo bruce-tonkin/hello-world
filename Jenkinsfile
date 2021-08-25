@@ -1,23 +1,26 @@
 node ('geoservertest') {
   try {
     parameters {
-      string(name: 'SDLC', defaultValue: 'dlvr', description: 'What environment should this be run against?')
-      string(name: 'APP', defaultValue: 'fcbc', description: 'Which component do you want to deploy?')
-//      string(name: 'gitTag', defaultValue: 'master', description: 'The repository version to pull from')      
+      string(name: 'SDLC', defaultValue: 'dlvr')
+      string(name: 'APP', defaultValue: 'fcbc')
+      string(name: 'APPSERVER', defaultValue: 'kurhah.dmz')
     }
     
     switch (KML_ENV) {
         case "Delivery":
           echo "Building dlvr"
           env.SDLC = 'dlvr'
+          env.APPSERVER = 'kurhah.dmz'
         break
         case "Test":
           echo "Building test"
           env.SDLC = 'test'
+          env.APPSERVER = 'kurhah.dmz'
         break
         case "Production":
           echo "Building prod"
           env.SDLC =  'prod'
+          env.APPSERVER = 'imai.dmz'
         break
         default: 
           println "That was unexpected with variable ENV"
@@ -48,6 +51,7 @@ node ('geoservertest') {
     echo "This is my echo with KML_ENV: ${env.SDLC}"
     echo "This is my echo with KML_APP: ${env.APP}"
     echo "This is my echo with KML_gitTag: ${KML_gitTag}"
+    echo "This is my echo with env.APPSERVER: ${env.APPSERVER}"
     
     echo "Set variables that can be used in external processes"
 //    setEnv ([
