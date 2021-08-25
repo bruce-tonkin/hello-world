@@ -3,10 +3,10 @@ node ('geoservertest') {
     parameters {
       string(name: 'SDLC', defaultValue: 'dlvr', description: 'What environment should this be run against?')
       string(name: 'APP', defaultValue: 'fcbc', description: 'Which component do you want to deploy?')
-      string(name: 'gitTag', defaultValue: 'master', description: 'The repository version to pull from')      
+//      string(name: 'gitTag', defaultValue: 'master', description: 'The repository version to pull from')      
     }
     
-    switch (ENV) {
+    switch (KML_ENV) {
         case "Delivery":
           echo "Building dlvr"
           env.SDLC = 'dlvr'
@@ -23,7 +23,7 @@ node ('geoservertest') {
           println "That was unexpected with variable ENV"
     }
     
-    switch (APP) {
+    switch (KML_APP) {
         case "fcbc":
           echo "Building fcbc"
           env.APP = 'fcbc'
