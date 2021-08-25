@@ -80,8 +80,8 @@ node ('geoservertest') {
     }
   } catch (e) {
                 currentBuild.result = "FAILED"
-                notifyFailed()
-                echo "Job Failes"
+//                notifyFailed()
+                echo "Job Fails"
                 throw e
     }
 }
