@@ -48,12 +48,24 @@ node ('geoservertest') {
     }
  
     
-    echo "This is my echo with KML_ENV: ${env.SDLC}"
-    echo "This is my echo with KML_APP: ${env.APP}"
-    echo "This is my echo with KML_gitTag: ${KML_gitTag}"
+    echo "This is my echo with env.SDLC: ${env.SDLC}"
     echo "This is my echo with env.APPSERVER: ${env.APPSERVER}"
+    echo "This is my echo with env.APP: ${env.APP}"
+    echo "This is my echo with KML_gitTag: ${KML_gitTag}"
     
     echo "Set variables that can be used in external processes"
+    setEnv ([
+      "JOB_NAME=KML_BUILD"
+      "GIT_SSL_NO_VERIFY=true",
+      "APPSERVER=${env.APPSERVER}",
+      "SDLC=${env.SDLC}"
+    ])
+     
+    echo "JOB_NAME: ${JOB_NAME}"
+    echo "GIS_SSL_NO_VERIFY: ${GIS_SSL_NO_VERIFY}"
+    echo "APPSERVER: ${APPSERVER}"
+    echo "SDLC: ${SDLC}"
+    
 //    setEnv ([
 //      "GIT_SSL_NO_VERIFY=true",
 //      "FOLDERNAME=ecocat_${env.PUBORSEC}",
