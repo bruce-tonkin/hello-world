@@ -55,7 +55,7 @@ node ('geoservertest') {
     
     echo "Set variables that can be used in external processes"
     setEnv ([
-      "JOB_NAME=KML_BUILD"
+      "JOB_NAME=KML_BUILD",
       "GIT_SSL_NO_VERIFY=true",
       "APPSERVER=${env.APPSERVER}",
       "SDLC=${env.SDLC}"
