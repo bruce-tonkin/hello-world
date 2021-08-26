@@ -60,7 +60,7 @@ node (targetNode) {
       "JOB_NAME=kml-build",
       "GIT_SSL_NO_VERIFY=true",
       "APPSERVER=${env.APPSERVER}",
-      "SDLC=${env.SDLC}"
+      "SDLC=${env.SDLC}",
       "KML_gitTag=${KML_gitTag}"
     ])
     {
