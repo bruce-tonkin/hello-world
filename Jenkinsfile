@@ -55,7 +55,7 @@ node ('geoservertest') {
     
     echo "Set variables that can be used in external processes"
     withEnv ([
-//      "JOB_NAME=KML_BUILD",
+      "JOB_NAME=kml-build",
       "GIT_SSL_NO_VERIFY=true",
       "APPSERVER=${env.APPSERVER}",
       "SDLC=${env.SDLC}"
@@ -66,15 +66,7 @@ node ('geoservertest') {
     echo "APPSERVER: ${APPSERVER}"
     echo "SDLC: ${SDLC}"
     
-//    setEnv ([
-//      "GIT_SSL_NO_VERIFY=true",
-//      "FOLDERNAME=ecocat_${env.PUBORSEC}",
-//      "SITENAME=ecocat",
-//      "PUBORSEC=${env.PUBORSEC}", 
-//      "APPSERVER=${env.APPSERVER}",
-//      "SDLC=${env.SDLC}"
-//    ])
-    
+  
     stage ('SCM prepare'){
       echo 'Building Stage 1'
     }
