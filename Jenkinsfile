@@ -61,7 +61,7 @@ node (targetNode) {
       "GIT_SSL_NO_VERIFY=true",
       "APPSERVER=${env.APPSERVER}",
       "SDLC=${env.SDLC}",
-      "gitTag=${KML_gitTag}"
+      "KML_gitTag=${KML_gitTag}"
     ])
     {
       echo "JOB_NAME: ${JOB_NAME}"
@@ -73,7 +73,7 @@ node (targetNode) {
       stage ('SCM prepare'){
         echo 'Building Stage 1 - Check out source code'
         deleteDir()
-        checkout([$class: 'GitSCM', branches: [[name: '${gitTag}']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/bruce-tonkin/hello-world.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '${KML_gitTag}']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/bruce-tonkin/hello-world.git']]])
 
       }
       
