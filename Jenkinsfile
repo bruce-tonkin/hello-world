@@ -73,7 +73,7 @@ node (targetNode) {
       stage ('SCM prepare'){
         echo 'Building Stage 1 - Check out source code'
         deleteDir()
-        checkout([$class: 'GitSCM', branches: [[name: '${gitTag}']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[credentialsId: '607141bd-ef34-4e80-8e7e-1134b7c77176', url: 'https://github.com/bruce-tonkin/hello-world.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '${gitTag}']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[credentialsId: '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', url: 'https://github.com/bruce-tonkin/hello-world.git']]])
 
       }
       
