@@ -1,4 +1,6 @@
-node ('geoservertest') {
+def targetNode = KML_ENV == "PROD" ? 'geoserverprod' : 'geoservertest'
+
+node (targetnode) {
   try {
     parameters {
       string(name: 'SDLC', defaultValue: 'dlvr')
@@ -51,6 +53,7 @@ node ('geoservertest') {
     echo "This is my echo with env.APPSERVER: ${env.APPSERVER}"
     echo "This is my echo with env.APP: ${env.APP}"
     echo "This is my echo with KML_gitTag: ${KML_gitTag}"
+    echo "This is my target node: ${targetNode}"
     
     echo "Set variables that can be used in external processes"
     withEnv ([
