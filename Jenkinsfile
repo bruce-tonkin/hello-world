@@ -1,6 +1,6 @@
 def targetNode = KML_ENV == "PROD" ? 'geoserverprod' : 'geoservertest'
 
-node (targetnode) {
+node (targetNode) {
   try {
     parameters {
       string(name: 'SDLC', defaultValue: 'dlvr')
