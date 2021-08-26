@@ -54,12 +54,12 @@ node ('geoservertest') {
     echo "This is my echo with KML_gitTag: ${KML_gitTag}"
     
     echo "Set variables that can be used in external processes"
-    withEnv ([
-      "JOB_NAME=KML_BUILD",
-      "GIT_SSL_NO_VERIFY=true",
-      "APPSERVER=${env.APPSERVER}",
-      "SDLC=${env.SDLC}"
-    ])
+//    withEnv ([
+//      "JOB_NAME=KML_BUILD",
+//      "GIT_SSL_NO_VERIFY=true",
+//      "APPSERVER=${env.APPSERVER}",
+//      "SDLC=${env.SDLC}"
+//    ])
      
     echo "JOB_NAME: ${JOB_NAME}"
     echo "GIS_SSL_NO_VERIFY: ${GIS_SSL_NO_VERIFY}"
