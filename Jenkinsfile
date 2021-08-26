@@ -1,4 +1,4 @@
-def targetNode = KML_ENV == "PROD" ? 'geoserverprod' : 'geoservertest'
+def targetNode = KML_ENV == "Production" ? 'geoserverprod' : 'geoservertest'
 
 node (targetNode) {
   try {
