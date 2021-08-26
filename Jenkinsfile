@@ -61,7 +61,7 @@ node (targetNode) {
       "GIT_SSL_NO_VERIFY=true",
       "APPSERVER=${env.APPSERVER}",
       "SDLC=${env.SDLC}"
-//      "gitTag=${KML_gitTag}"
+      "KML_gitTag=${KML_gitTag}"
     ])
     {
       echo "JOB_NAME: ${JOB_NAME}"
