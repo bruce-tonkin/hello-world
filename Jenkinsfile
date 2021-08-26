@@ -62,7 +62,7 @@ node ('geoservertest') {
 //    ])
      
     echo "JOB_NAME: ${JOB_NAME}"
-    echo "GIS_SSL_NO_VERIFY: ${GIS_SSL_NO_VERIFY}"
+    echo "GIT_SSL_NO_VERIFY: ${GIT_SSL_NO_VERIFY}"
     echo "APPSERVER: ${APPSERVER}"
     echo "SDLC: ${SDLC}"
     
