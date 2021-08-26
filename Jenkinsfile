@@ -57,17 +57,21 @@ node ('geoservertest') {
       "JOB_NAME=kml-build",
       "GIT_SSL_NO_VERIFY=true",
       "APPSERVER=${env.APPSERVER}",
-      "SDLC=${env.SDLC}"
+      "SDLC=${env.SDLC}",
+      "gitTag=${KML_gitTag}"
     ])
     {
       echo "JOB_NAME: ${JOB_NAME}"
       echo "GIT_SSL_NO_VERIFY: ${GIT_SSL_NO_VERIFY}"
       echo "APPSERVER: ${APPSERVER}"
       echo "SDLC: ${SDLC}"
+      echo "gitTag: ${gitTag}"
     
       stage ('SCM prepare'){
-        echo 'Building Stage 1'
-        sh 'printenv'
+        echo 'Building Stage 1 - Check out source code'
+//        deleteDir()
+//        checkout([$class: 'GitSCM', branches: [[name: '${gitTag}']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[credentialsId: '607141bd-ef34-4e80-8e7e-1134b7c77176', url: 'https://gogs.data.gov.bc.ca/waops/geoserver_build.git']]])
+
       }
       
       stage ('Build using Ant and copy configs to server'){
