@@ -68,7 +68,7 @@ node (targetNode) {
       echo "GIT_SSL_NO_VERIFY: ${GIT_SSL_NO_VERIFY}"
       echo "APPSERVER: ${APPSERVER}"
       echo "SDLC: ${SDLC}"
-//      echo "KML_gitTag: ${KML_gitTag}"
+      echo "KML_gitTag: ${KML_gitTag}"
     
       stage ('SCM prepare'){
         echo 'Building Stage 1 - Check out source code'
