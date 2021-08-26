@@ -68,17 +68,18 @@ node ('geoservertest') {
       stage ('SCM prepare'){
         echo 'Building Stage 1'
       }
-    }
+      
+    } // end of withEnv block
     
-  } 
+  } // end of try
   
   catch (e) {
     currentBuild.result = "FAILED"
     notifyFailed()
     echo "Job Fails"
     throw e
-  }
-}
+  } // end of catch
+} // end of node
 
 def notifyFailed() {
     emailext (
