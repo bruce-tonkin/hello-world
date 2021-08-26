@@ -69,6 +69,10 @@ node ('geoservertest') {
         echo 'Building Stage 1'
       }
       
+      stage ('Build using Ant and copy configs to server'){
+        echo 'Building Stage 2'
+      }
+      
     } // end of withEnv block
     
   } // end of try
