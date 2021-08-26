@@ -7,46 +7,45 @@ node ('geoservertest') {
     }
     
     switch (KML_ENV) {
-        case "Delivery":
-          echo "Building dlvr"
-          env.SDLC = 'dlvr'
-          env.APPSERVER = 'kurhah.dmz'
+      case "Delivery":
+        echo "Building dlvr"
+        env.SDLC = 'dlvr'
+        env.APPSERVER = 'kurhah.dmz'
         break
-        case "Test":
-          echo "Building test"
-          env.SDLC = 'test'
-          env.APPSERVER = 'kurhah.dmz'
+      case "Test":
+        echo "Building test"
+        env.SDLC = 'test'
+        env.APPSERVER = 'kurhah.dmz'
         break
-        case "Production":
-          echo "Building prod"
-          env.SDLC =  'prod'
-          env.APPSERVER = 'imai.dmz'
+      case "Production":
+        echo "Building prod"
+        env.SDLC =  'prod'
+        env.APPSERVER = 'imai.dmz'
         break
-        default: 
-          println "That was unexpected with variable ENV"
+      default: 
+        println "That was unexpected with variable ENV"
     }
     
     switch (KML_APP) {
-        case "fcbc":
-          echo "Building fcbc"
-          env.APP = 'fcbc'
+      case "fcbc":
+        echo "Building fcbc"
+        env.APP = 'fcbc'
         break
-        case "geocoder":
-          echo "Building geocoder"
-          env.APP = 'geocoder'
+      case "geocoder":
+        echo "Building geocoder"
+        env.APP = 'geocoder'
         break
-        case "geomark":
-          echo "Building geomark"
-          env.APP =  'geomark'
+      case "geomark":
+        echo "Building geomark"
+        env.APP =  'geomark'
         break
-        case "Icons":
-          echo "Building Icons"
-          env.APP =  'Icons'
+      case "Icons":
+        echo "Building Icons"
+        env.APP =  'Icons'
         break
-        default: 
-          println "That was unexpected with variable APP"
+      default: 
+        println "That was unexpected with variable APP"
     }
- 
     
     echo "This is my echo with env.SDLC: ${env.SDLC}"
     echo "This is my echo with env.APPSERVER: ${env.APPSERVER}"
@@ -60,14 +59,15 @@ node ('geoservertest') {
       "APPSERVER=${env.APPSERVER}",
       "SDLC=${env.SDLC}"
     ])
-     
-    echo "JOB_NAME: ${JOB_NAME}"
-    echo "GIT_SSL_NO_VERIFY: ${GIT_SSL_NO_VERIFY}"
-    echo "APPSERVER: ${APPSERVER}"
-    echo "SDLC: ${SDLC}"
+    {
+      echo "JOB_NAME: ${JOB_NAME}"
+      echo "GIT_SSL_NO_VERIFY: ${GIT_SSL_NO_VERIFY}"
+      echo "APPSERVER: ${APPSERVER}"
+      echo "SDLC: ${SDLC}"
     
-    stage ('SCM prepare'){
-      echo 'Building Stage 1'
+      stage ('SCM prepare'){
+        echo 'Building Stage 1'
+      }
     }
     
   } 
