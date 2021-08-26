@@ -3,7 +3,7 @@ def targetNode = KML_ENV == "Production" ? 'geoserverprod' : 'geoservertest'
 node (targetNode) {
   try {
     parameters {
-      string(name: 'SDLC', defaultValue: 'dlvr')
+      string(name: 'SDLC', defaultValue: 'DLVR')
       string(name: 'APP', defaultValue: 'fcbc')
       string(name: 'APPSERVER', defaultValue: 'kurhah.dmz')
     }
@@ -11,17 +11,17 @@ node (targetNode) {
     switch (KML_ENV) {
       case "Delivery":
         echo "Building dlvr"
-        env.SDLC = 'dlvr'
+        env.SDLC = 'DLVR'
         env.APPSERVER = 'kurhah.dmz'
         break
       case "Test":
         echo "Building test"
-        env.SDLC = 'test'
+        env.SDLC = 'TEST'
         env.APPSERVER = 'kurhah.dmz'
         break
       case "Production":
         echo "Building prod"
-        env.SDLC =  'prod'
+        env.SDLC =  'PROD'
         env.APPSERVER = 'imai.dmz'
         break
       default: 
