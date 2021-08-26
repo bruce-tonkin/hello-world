@@ -67,6 +67,7 @@ node ('geoservertest') {
     
       stage ('SCM prepare'){
         echo 'Building Stage 1'
+        sh 'printenv'
       }
       
       stage ('Build using Ant and copy configs to server'){
