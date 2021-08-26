@@ -66,16 +66,18 @@ node ('geoservertest') {
     echo "APPSERVER: ${APPSERVER}"
     echo "SDLC: ${SDLC}"
     
-  
     stage ('SCM prepare'){
       echo 'Building Stage 1'
     }
-  } catch (e) {
-                currentBuild.result = "FAILED"
-                notifyFailed()
-                echo "Job Fails"
-                throw e
-    }
+    
+  } 
+  
+  catch (e) {
+    currentBuild.result = "FAILED"
+    notifyFailed()
+    echo "Job Fails"
+    throw e
+  }
 }
 
 def notifyFailed() {
@@ -85,4 +87,4 @@ def notifyFailed() {
             <p>Check console output at "<a href="${env.BUILD_URL}">${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>"</p></html></body>""",
         to: 'bruce.tonkin@gov.bc.ca'
     )
-}
+} // end of def
