@@ -17,7 +17,7 @@
 	<!-- ================================================================== -->
 	<target name="fcbckml_build" depends="init" description="Updates the appropriate kml files with correct parameters">
 		<echo message="Updating FCBC KML files"/>
-		<replace dir="..\.">
+		<replace dir="..\kml">
 			<replacefilter token="##application.url##"     value="https://test.openmaps.gov.bc.ca"/>
 			<replacefilter token="##bcgnws.url##"          value="https://apps.gov.bc.ca/pub/bcgnws/names"/>
 			<replacefilter token="##cadb.url##"            value="https://maps.gov.bc.ca/ess/hm/cadb"/>
