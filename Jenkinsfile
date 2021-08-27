@@ -61,7 +61,6 @@ node (targetNode) {
       "GIT_SSL_NO_VERIFY=true",
       "APPSERVER=${env.APPSERVER}",
       "SDLC=${env.SDLC}"
-//      "KML_gitTag=${KML_gitTag}"
     ])
     {
       echo "JOB_NAME: ${JOB_NAME}"
@@ -78,7 +77,7 @@ node (targetNode) {
       
       stage ('Build using Ant and copy configs to server'){
         echo 'Building using Ant and copy configs to the server'
-        bat '''
+//        bat '''
 //        set TEMP=E:\\sw_nt\\jenkins\\workspace\\temp
 //        set TMP=%TEMP%
 //        set
@@ -89,9 +88,9 @@ node (targetNode) {
 
 //        move %WORKSPACE%\\%SITENAME% %WORKSPACE%\\sites\\%SITENAME%
 //        move %WORKSPACE%\\release\\%ENV%\\build.xml %WORKSPACE%\\%ENV%\\build.xml
-        echo "Temp is ${TEMP}"
-        echo "Temp is ${TMP}"
-	echo "Path is ${PATH}"
+//        echo "Temp is ${TEMP}"
+//        echo "Temp is ${TMP}"
+//	echo "Path is ${PATH}"
         
       }
       
