@@ -78,22 +78,13 @@ node (targetNode) {
       stage ('Build using Ant and copy configs to server'){
         echo 'Building using Ant and copy configs to the server'
         bat '''
-rem        set TEMP=E:\\sw_nt\\jenkins\\workspace\\temp
-rem        set TMP=%TEMP%
-rem        set
-rem        rmdir %WORKSPACE%\\sites /S /Q
-rem        mkdir %WORKSPACE%\\sites
-rem        rmdir %WORKSPACE%\\%ENV% /S /Q
-rem        mkdir %WORKSPACE%\\%ENV%
-rem        move %WORKSPACE%\\%SITENAME% %WORKSPACE%\\sites\\%SITENAME%
-rem        move %WORKSPACE%\\release\\%ENV%\\build.xml %WORKSPACE%\\%ENV%\\build.xml
 
         echo "Temp is : %TEMP%"
         echo "Tmp is : %TMP%"
         echo "Path is : %PATH%"
         echo "Workspace is : %WORKSPACE%"
 	echo "Workspace ENV SDLC is : %env.SDLC%"
-rem        //echo "Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%ENV%\\build.xml"
+        echo "Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%ENV%\\build.xml"
 rem        //call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\${env.SDLC}\\build.xml
         '''
       }
