@@ -74,11 +74,23 @@ node (targetNode) {
         echo 'Building Stage 1 - Check out source code'
         deleteDir()
         checkout([$class: 'GitSCM', branches: [[name: '${KML_gitTag}']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/bruce-tonkin/hello-world.git']]])
-
       }
       
       stage ('Build using Ant and copy configs to server'){
-        echo 'Building Stage 2'
+        echo 'Building using Ant and copy configs to the server'
+        bat '''
+        set TEMP=E:\\sw_nt\\jenkins\\workspace\\temp
+        set TMP=%TEMP%
+        set
+        rmdir %WORKSPACE%\\sites /S /Q
+        mkdir %WORKSPACE%\\sites
+				rmdir %WORKSPACE%\\%ENV% /S /Q
+        mkdir %WORKSPACE%\\%ENV%
+
+        move %WORKSPACE%\\%SITENAME% %WORKSPACE%\\sites\\%SITENAME%
+        move %WORKSPACE%\\release\\%ENV%\\build.xml %WORKSPACE%\\%ENV%\\build.xml
+
+        
       }
       
     } // end of withEnv block
