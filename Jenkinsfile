@@ -77,7 +77,7 @@ node (targetNode) {
       
       stage ('Build using Ant and copy configs to server'){
         echo 'Building using Ant and copy configs to the server'
-//        bat '''
+        bat '''
 //        set TEMP=E:\\sw_nt\\jenkins\\workspace\\temp
 //        set TMP=%TEMP%
 //        set
