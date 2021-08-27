@@ -93,7 +93,7 @@ node (targetNode) {
         echo "Path is : ${PATH}"
         echo "Workspace is : %WORKSPACE%"
 	echo "Workspace ENV SDLC is : ${env.SDLC}"
-        echo "Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%ENV%\\build.xml"
+        //echo "Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%ENV%\\build.xml"
         //call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\${env.SDLC}\\build.xml
       }
       
