@@ -82,16 +82,16 @@ node (targetNode) {
 //        set TMP=%TEMP%
 //        set
 //        rmdir %WORKSPACE%\\sites /S /Q
-        mkdir %WORKSPACE%\\sites
+//        mkdir %WORKSPACE%\\sites
 //        rmdir %WORKSPACE%\\%ENV% /S /Q
 //        mkdir %WORKSPACE%\\%ENV%
-
 //        move %WORKSPACE%\\%SITENAME% %WORKSPACE%\\sites\\%SITENAME%
 //        move %WORKSPACE%\\release\\%ENV%\\build.xml %WORKSPACE%\\%ENV%\\build.xml
+
         echo "Temp is : ${TEMP}"
         echo "Tmp is : ${TMP}"
         echo "Path is : ${PATH}"
-        echo "Workspace is : %WORKSPACE%"
+        echo "Workspace is : ${WORKSPACE}"
 	echo "Workspace ENV SDLC is : ${env.SDLC}"
         //echo "Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%ENV%\\build.xml"
         //call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\${env.SDLC}\\build.xml
