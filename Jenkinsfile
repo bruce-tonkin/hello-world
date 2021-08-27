@@ -92,8 +92,9 @@ node (targetNode) {
         echo "Tmp is : ${TMP}"
         echo "Path is : ${PATH}"
         echo "Workspace is : %WORKSPACE%"
-	      echo "Workspace ENV SDLC is : ${env.SDLC}"
-	      
+	echo "Workspace ENV SDLC is : ${env.SDLC}"
+        echo "Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\%ENV%\\build.xml"
+        //call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\%ENV%\\build.xml
       }
       
     } // end of withEnv block
