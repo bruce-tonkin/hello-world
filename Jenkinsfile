@@ -77,7 +77,7 @@ node (targetNode) {
       
       stage ('Build using Ant and copy configs to server'){
         echo 'Building using Ant and copy configs to the server'
-//        bat '''
+        bat '''
 //        set TEMP=E:\\sw_nt\\jenkins\\workspace\\temp
 //        set TMP=%TEMP%
 //        set
@@ -95,6 +95,7 @@ node (targetNode) {
 	echo "Workspace ENV SDLC is : ${env.SDLC}"
         //echo "Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%ENV%\\build.xml"
         //call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\${env.SDLC}\\build.xml
+        '''
       }
       
     } // end of withEnv block
