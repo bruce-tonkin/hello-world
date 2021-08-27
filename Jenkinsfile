@@ -84,7 +84,7 @@ node (targetNode) {
 //        rmdir %WORKSPACE%\\sites /S /Q
         mkdir %WORKSPACE%\\sites
 //        rmdir %WORKSPACE%\\%ENV% /S /Q
-        mkdir %WORKSPACE%\\%ENV%
+//        mkdir %WORKSPACE%\\%ENV%
 
 //        move %WORKSPACE%\\%SITENAME% %WORKSPACE%\\sites\\%SITENAME%
 //        move %WORKSPACE%\\release\\%ENV%\\build.xml %WORKSPACE%\\%ENV%\\build.xml
