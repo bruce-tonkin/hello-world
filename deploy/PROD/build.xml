@@ -19,7 +19,6 @@
 		<echo message="Updating FCBC KML files"/>
 		<replace dir="..\.">
 			<replacefilter token="##application.url##"     value="https://openmaps.gov.bc.ca"/>
-			<replacefilter token="##apps.ur##l"            value="https://apps.gov.bc.ca"/>
 			<replacefilter token="##bcgnws.url##"          value="https://apps.gov.bc.ca/pub/bcgnws/names"/>
 			<replacefilter token="##cadb.url##"            value="https://maps.gov.bc.ca/ess/hm/cadb"/>
 			<replacefilter token="##catalogue.url##"       value="https://catalogue.data.gov.bc.ca"/>
@@ -33,6 +32,7 @@
 			<replacefilter token="##googlemaps.url##"      value="https://maps.google.com"/>
 			<replacefilter token="##mapicons.url##"        value="https://mapicons.nicolasmollet.com"/>
 			<replacefilter token="##mtec.url##"            value="https://a100.gov.bc.ca/ext/mtec"/>
+			<replacefilter token="##apps.ur##l"            value="https://apps.gov.bc.ca"/>
 		</replace>
 	</target>
 </project>
