@@ -92,7 +92,7 @@ node (targetNode) {
         echo "Tmp is : ${TMP}"
         echo "Path is : ${PATH}"
         echo "Workspace is : %WORKSPACE%"
-	      echo "Workspace ENV is : ${KML_ENV}"
+	      echo "Workspace ENV SDLC is : ${env.SDLC}"
 	      
       }
       
