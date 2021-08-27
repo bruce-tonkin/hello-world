@@ -89,8 +89,8 @@ node (targetNode) {
 //        move %WORKSPACE%\\%SITENAME% %WORKSPACE%\\sites\\%SITENAME%
 //        move %WORKSPACE%\\release\\%ENV%\\build.xml %WORKSPACE%\\%ENV%\\build.xml
         echo "Temp is ${TEMP}"
-        echo "Temp is ${TMP}"
-//	      echo "Path is ${PATH}"
+        echo "Tmp is ${TMP}"
+	      echo "Path is ${PATH}"
         
       }
       
