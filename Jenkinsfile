@@ -82,7 +82,7 @@ node (targetNode) {
 //        set TMP=%TEMP%
 //        set
 //        rmdir %WORKSPACE%\\sites /S /Q
-//        mkdir %WORKSPACE%\\sites
+        mkdir ${WORKSPACE}\\sites
 //        rmdir %WORKSPACE%\\%ENV% /S /Q
 //        mkdir %WORKSPACE%\\%ENV%
 //        move %WORKSPACE%\\%SITENAME% %WORKSPACE%\\sites\\%SITENAME%
