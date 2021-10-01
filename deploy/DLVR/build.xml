@@ -32,7 +32,7 @@
 			<replacefilter token="##googlemaps.url##"      value="https://maps.google.com"/>
 			<replacefilter token="##mapicons.url##"        value="https://mapicons.nicolasmollet.com"/>
 			<replacefilter token="##mtec.url##"            value="https://a100.gov.bc.ca/ext/mtec"/>
-			<replacefilter token="##apps.ur##l"            value="https://apps.gov.bc.ca"/>
+			<replacefilter token="##apps.url##"            value="https://apps.gov.bc.ca"/>
 		</replace>
 	</target>
 </project>
