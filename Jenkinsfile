@@ -54,7 +54,7 @@ node (targetNode) {
     echo "This is my echo with env.APP: ${env.APP}"
     echo "This is my echo with KML_gitTag: ${KML_gitTag}"
     echo "This is my target node: ${targetNode}"
-    echo "SDLC is: ${SDLC}"
+    
     
     echo "Set variables that can be used in external processes"
     withEnv ([
@@ -85,7 +85,9 @@ node (targetNode) {
         echo "Path is : %PATH%"
         echo "Workspace is : %WORKSPACE%"
 	echo "Workspace ENV SDLC is : %env.SDLC%"
-        echo "Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%ENV%\\build.xml"
+        echo "SDLC is: %SDLC%"
+
+        echo "BAD: Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%ENV%\\build.xml"
 	echo: "call ant -buildfile E:\\sw_nt\\jenkins\\workspace\\waops\\fcbc_kml\\deploy\\DLVR\\build.xml"
 	echo: "NOTE FOR MYSELF - all substitutions have and extra quote after the substitution.. this needs to be removed"
         call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\${env.SDLC}\\build.xml
