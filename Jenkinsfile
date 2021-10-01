@@ -54,6 +54,7 @@ node (targetNode) {
     echo "This is my echo with env.APP: ${env.APP}"
     echo "This is my echo with KML_gitTag: ${KML_gitTag}"
     echo "This is my target node: ${targetNode}"
+    echo "SDLC is: ${SDLC}"
     
     echo "Set variables that can be used in external processes"
     withEnv ([
