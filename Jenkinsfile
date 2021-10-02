@@ -84,13 +84,13 @@ node (targetNode) {
         echo "Tmp is : %TMP%"
         echo "Path is : %PATH%"
         echo "Workspace is : %WORKSPACE%"
-	echo "Workspace ENV SDLC is : %env.SDLC%"
         echo "SDLC is: %SDLC%"
 
         echo "BAD: Ant call is : call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%ENV%\\build.xml"
 	echo: "call ant -buildfile E:\\sw_nt\\jenkins\\workspace\\waops\\fcbc_kml\\deploy\\DLVR\\build.xml"
-	echo: "NOTE FOR MYSELF - all substitutions have and extra quote after the substitution.. this needs to be removed"
+	echo: "NOTE FOR MYSELF - all substitutions have and extra quote after the substitution. this needs to be removed"
         call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%SDLC%\\build.xml
+	
         '''
       }
       
