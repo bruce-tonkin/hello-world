@@ -94,7 +94,7 @@ node (targetNode) {
 	echo: "NOTE FOR MYSELF - all substitutions have and extra quote after the substitution. This needs to be removed"
 	
 	echo Copy the kml files from: \\%WORKSPACE%\\kml\\%APP%\\
-	echo Copy the kml files to: \\\\%APPSERVER%\\e$\\inetpub\\wwwroot\\kml\\%APP%
+	echo Copy the kml files to: \\\\%APPSERVER%\\e$\\inetpub\\wwwroot\\kml\\%APP%\\*
 	rem to this location and then over to %APPSERVER% - \\%APPSERVER%\\scripts\\geoserver
         rem xcopy %WORKSPACE%\\* \\\\%APPSERVER%\\scripts\\geoserver\\%GEOSERVER_ENV%\\* /q /i /e /y
 
