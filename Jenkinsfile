@@ -61,12 +61,14 @@ node (targetNode) {
       "JOB_NAME=kml-build",
       "GIT_SSL_NO_VERIFY=true",
       "APPSERVER=${env.APPSERVER}",
+      "APP=${env.APP}",
       "SDLC=${env.SDLC}"
     ])
     {
       echo "JOB_NAME: ${JOB_NAME}"
       echo "GIT_SSL_NO_VERIFY: ${GIT_SSL_NO_VERIFY}"
       echo "APPSERVER: ${APPSERVER}"
+      echo "APP: ${APP}"
       echo "SDLC: ${SDLC}"
       echo "KML_gitTag: ${KML_gitTag}"
     
@@ -84,11 +86,23 @@ node (targetNode) {
         echo "Tmp is : %TMP%"
         echo "Path is : %PATH%"
         echo "Workspace is : %WORKSPACE%"
+	echo "Appserver is: %APPSERVER%"
         echo "SDLC is: %SDLC%"
 
        	echo: "call ant -buildfile E:\\sw_nt\\jenkins\\workspace\\waops\\fcbc_kml\\deploy\\%SDLC%\\build.xml"
         call E:\\sw_nt\\ant\\bin\\ant -buildfile %WORKSPACE%\\deploy\\%SDLC%\\build.xml
 	echo: "NOTE FOR MYSELF - all substitutions have and extra quote after the substitution. This needs to be removed"
+	
+	echo Copy the kml files from: \\%WORKSPACE%\\kml\\* 
+	echo Copy the kml files to: \\%APPSERVER%\\e$\\inetpub\\wwwroot\\kml\\%APP%                \\imai.dmz\e$\inetpub\wwwroot\kml\fcbc
+	rem to this location and then over to %APPSERVER% - \\%APPSERVER%\\scripts\\geoserver
+        rem xcopy %WORKSPACE%\\* \\\\%APPSERVER%\\scripts\\geoserver\\%GEOSERVER_ENV%\\* /q /i /e /y
+
+        IF %ERRORLEVEL% NEQ 0 (
+           echo "Error: Unable to copy the build script into place"
+           exit 200
+        )
+	
 	
         '''
       }
