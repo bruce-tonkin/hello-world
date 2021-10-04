@@ -99,7 +99,7 @@ node (targetNode) {
         rem xcopy %WORKSPACE%\\* \\\\%APPSERVER%\\scripts\\geoserver\\%GEOSERVER_ENV%\\* /q /i /e /y
 
         IF %ERRORLEVEL% NEQ 0 (
-           echo "Error: Unable to copy the build script into place"
+           echo "Error: Unable to copy the kml files into place"
            exit 200
         )
 	
