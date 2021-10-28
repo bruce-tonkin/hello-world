@@ -95,8 +95,7 @@ node (targetNode) {
 	
 	echo Copy the kml files from: %WORKSPACE%\\kml\\%APP%\\*
 	echo Copy the kml files to: \\\\%APPSERVER%\\e$\\inetpub\\wwwroot\\kml\\%APP%\\*
-	rem to this location and then over to %APPSERVER% - \\%APPSERVER%\\scripts\\geoserver
-        rem xcopy %WORKSPACE%\\* \\\\%APPSERVER%\\scripts\\geoserver\\%GEOSERVER_ENV%\\* /q /i /e /y
+	echo Copy xcopy %WORKSPACE%\\kml\\%APP%\\* \\\\%APPSERVER%\\e$\\inetpub\\wwwroot\\kml\\%APP%\\* /q /i /e /y
 
         IF %ERRORLEVEL% NEQ 0 (
            echo "Error: Unable to copy the kml files into place"
