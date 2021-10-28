@@ -390,7 +390,7 @@
  <A HREF="##github.url##/api-specs/blob/master/geocoder/glossary.md#accessPoint">access points</a>
             
 <br><br>
-  	<img src="##application.url##"/kml/icons/geocoder/accessPoint_high.png" height=36 width=36> access point - high accuracy<br>
+		<img src="##application.url##/kml/icons/geocoder/accessPoint_high.png" height=36 width=36> access point - high accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/accessPoint_medium.png" height="36" width="36"> access point - medium accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/accessPoint_low.png" height="36" width="36"> access point - low accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/frontDoorPoint_high.png" height="36" width="36"> front door point - high accuracy<br>
@@ -444,7 +444,7 @@
  <A HREF="##github.url##/api-specs/blob/master/geocoder/glossary.md#accessPoint">access points</a>
             
 <br><br>
-  	<img src="##application.url##"/kml/icons/geocoder/accessPoint_high.png" height=36 width=36> access point - high accuracy<br>
+  		<img src="##application.url##/kml/icons/geocoder/accessPoint_high.png" height=36 width=36> access point - high accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/accessPoint_medium.png" height="36" width="36"> access point - medium accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/accessPoint_low.png" height="36" width="36"> access point - low accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/frontDoorPoint_high.png" height="36" width="36"> front door point - high accuracy<br>
@@ -485,7 +485,7 @@
  <A HREF="##github.url##/api-specs/blob/master/geocoder/glossary.md#accessPoint">access points</a> of site addresses
             
 <br><br>
-  	<img src="##application.url##"/kml/icons/geocoder/accessPoint_high.png" height=36 width=36> access point - high accuracy<br>
+		<img src="##application.url##/kml/icons/geocoder/accessPoint_high.png" height=36 width=36> access point - high accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/accessPoint_medium.png" height="36" width="36"> access point - medium accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/accessPoint_low.png" height="36" width="36"> access point - low accuracy<br>
             
@@ -521,7 +521,7 @@
  <A HREF="##github.url##/api-specs/blob/master/geocoder/glossary.md#accessPoint">access points</a> of site addresses
             
 <br><br>
-  	<img src="##application.url##"/kml/icons/geocoder/accessPoint_high.png" height=36 width=36> access point - high accuracy<br>
+		<img src="##application.url##/kml/icons/geocoder/accessPoint_high.png" height=36 width=36> access point - high accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/accessPoint_medium.png" height="36" width="36"> access point - medium accuracy<br>
 		<img src="##application.url##/kml/icons/geocoder/accessPoint_low.png" height="36" width="36"> access point - low accuracy<br>
             
@@ -1252,7 +1252,7 @@
       </description>
 			<drawOrder>6</drawOrder>
 			<Icon>
-					<href>##application.url##"/geo/pub/wms?service=wms&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;LAYERS=pub:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
+				<href>##application.url##/geo/pub/wms?service=wms&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;LAYERS=pub:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
 				<viewRefreshMode>onStop</viewRefreshMode>
 				<viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&amp;WIDTH=[horizPixels]&amp;HEIGHT=[vertPixels]</viewFormat>
 			</Icon>
@@ -1343,7 +1343,7 @@ Use one of these layers when you are looking for a particular feature or just ro
 				</LookAt>
 				<drawOrder>7</drawOrder>
 				<Icon>
-					<href>##application.url##"/geo/pub/wms?service=wms&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;LAYERS=pub:WHSE_BASEMAPPING.NTS_250K_GRID,pub:WHSE_BASEMAPPING.TRIM_WATER_LINES,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_LINES,pub:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP,pub:WHSE_BASEMAPPING.TRIM_WATER_POINTS,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_POINTS,pub:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS,pub:WHSE_BASEMAPPING.BCGS_20K_GRID&amp;styles=668,3345,3334,,3344,3333,3332,667&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
+					<href>##application.url##/geo/pub/wms?service=wms&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;LAYERS=pub:WHSE_BASEMAPPING.NTS_250K_GRID,pub:WHSE_BASEMAPPING.TRIM_WATER_LINES,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_LINES,pub:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP,pub:WHSE_BASEMAPPING.TRIM_WATER_POINTS,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_POINTS,pub:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS,pub:WHSE_BASEMAPPING.BCGS_20K_GRID&amp;styles=668,3345,3334,,3344,3333,3332,667&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
 					<viewRefreshMode>onStop</viewRefreshMode>
 					<viewRefreshTime>2</viewRefreshTime>
 					<viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&amp;WIDTH=[horizPixels]&amp;HEIGHT=[vertPixels]</viewFormat>
@@ -1388,7 +1388,7 @@ Use one of these layers when you are looking for a particular feature or just ro
 				</LookAt>
 				<drawOrder>7</drawOrder>
 				<Icon>
-					<href>##application.url##"/geo/pub/wms?service=wms&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;layers=pub:WHSE_BASEMAPPING.TRIM_CONTOUR_LINES,pub:WHSE_BASEMAPPING.NTS_250K_GRID,pub:WHSE_BASEMAPPING.TRIM_WATER_LINES,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_LINES,pub:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP,pub:WHSE_BASEMAPPING.TRIM_WATER_POINTS,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_POINTS,pub:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS,pub:WHSE_BASEMAPPING.BCGS_20K_GRID&amp;styles=3330,668,3345,3334,,3344,3333,3332,667&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
+					<href>##application.url##/geo/pub/wms?service=wms&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;layers=pub:WHSE_BASEMAPPING.TRIM_CONTOUR_LINES,pub:WHSE_BASEMAPPING.NTS_250K_GRID,pub:WHSE_BASEMAPPING.TRIM_WATER_LINES,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_LINES,pub:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP,pub:WHSE_BASEMAPPING.TRIM_WATER_POINTS,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_POINTS,pub:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS,pub:WHSE_BASEMAPPING.BCGS_20K_GRID&amp;styles=3330,668,3345,3334,,3344,3333,3332,667&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
 					<viewRefreshMode>onStop</viewRefreshMode>
 					<viewRefreshTime>2</viewRefreshTime>
 					<viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&amp;WIDTH=[horizPixels]&amp;HEIGHT=[vertPixels]</viewFormat>
@@ -1456,7 +1456,7 @@ Use this layer after you've found the particular feature or area you want to til
 				</LookAt>
 				<drawOrder>7</drawOrder>
 				<Icon>
-					<href>##application.url##"/geo/pub/wms?service=wms&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;LAYERS=pub:WHSE_BASEMAPPING.NTS_250K_GRID,pub:WHSE_BASEMAPPING.TRIM_WATER_LINES,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_LINES,pub:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP,pub:WHSE_BASEMAPPING.TRIM_WATER_POINTS,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_POINTS,pub:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS,pub:WHSE_BASEMAPPING.BCGS_20K_GRID&amp;styles=668,3345,3334,WHSE_BASEMAPPINGDRA_DGTL_ROAD_ATLAS_MPAR_SP,3344,3333,3332,667&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
+					<href>##application.url##/geo/pub/wms?service=wms&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;SRS=EPSG:4326&amp;LAYERS=pub:WHSE_BASEMAPPING.NTS_250K_GRID,pub:WHSE_BASEMAPPING.TRIM_WATER_LINES,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_LINES,pub:WHSE_BASEMAPPING.DRA_DGTL_ROAD_ATLAS_MPAR_SP,pub:WHSE_BASEMAPPING.TRIM_WATER_POINTS,pub:WHSE_BASEMAPPING.TRIM_TRANSPORTATION_POINTS,pub:WHSE_BASEMAPPING.TRIM_CONTOUR_POINTS,pub:WHSE_BASEMAPPING.BCGS_20K_GRID&amp;styles=668,3345,3334,WHSE_BASEMAPPINGDRA_DGTL_ROAD_ATLAS_MPAR_SP,3344,3333,3332,667&amp;TRANSPARENT=TRUE&amp;FORMAT=image/png&amp;</href>
 					<viewRefreshMode>onStop</viewRefreshMode>
 					<viewRefreshTime>7204</viewRefreshTime>
 					<viewFormat>BBOX=[bboxWest],[bboxSouth],[bboxEast],[bboxNorth]&amp;WIDTH=[horizPixels]&amp;HEIGHT=[vertPixels]</viewFormat>
@@ -1523,7 +1523,7 @@ Use this layer after you've found the particular feature or area you want to til
             <Snippet maxLines="0"></Snippet>
 			<drawOrder>97</drawOrder>
 			<Icon>
-				<href>##application.url##"/kml/icons/DataBC_logo.png</href>
+				<href>##application.url##/kml/icons/DataBC_logo.png</href>
 			</Icon>
 			<overlayXY x="0.0800000" y="0.300000001" xunits="fraction" yunits="fraction"/>
 			<screenXY x="0" y="0.04000000000000001" xunits="fraction" yunits="fraction"/>
