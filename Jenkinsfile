@@ -33,6 +33,10 @@ node (targetNode) {
         echo "Building fcbc"
         env.APP = 'fcbc'
         break
+      case "geobc":
+        echo "Building geobc"
+        env.APP = 'geobc'
+        break
       case "geocoder":
         echo "Building geocoder"
         env.APP = 'geocoder'
@@ -102,7 +106,6 @@ node (targetNode) {
            echo "Error: Unable to copy the kml files into place"
            exit 200
         )
-	
 	
         '''
       }
