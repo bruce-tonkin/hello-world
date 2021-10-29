@@ -10,7 +10,7 @@ Folders:
 
 All other files deployed using the Jenkins job above
 2. fcbc - Front Counter BC
-3. 4. geobc - Contains BCGov_Ortho_Viewer_Loader.kml
-5. geocoder - GeoCoder
-6. geomark - GeoMark
-7. Icons - common icons that are consumed by all the other kml files
+3. geobc - Contains BCGov_Ortho_Viewer_Loader.kml
+4. geocoder - GeoCoder
+5. geomark - GeoMark
+6. Icons - common icons that are consumed by all the other kml files
