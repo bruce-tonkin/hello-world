@@ -99,7 +99,7 @@ node (targetNode) {
 	
 	echo Copy the kml files from: %WORKSPACE%\\kml\\%APP%\\*
 	echo Copy the kml files to: \\\\%APPSERVER%\\e$\\inetpub\\wwwroot\\kml\\%APP%\\*
-	echo xcopy %WORKSPACE%\\kml\\%APP%\\* \\\\%APPSERVER%\\e$\\inetpub\\wwwroot\\kml\\%APP%\\* /q /i /e /y
+	xcopy %WORKSPACE%\\kml\\%APP%\\* \\\\%APPSERVER%\\e$\\inetpub\\wwwroot\\kml\\%APP%\\* /q /i /e /y
 
 
         IF %ERRORLEVEL% NEQ 0 (
