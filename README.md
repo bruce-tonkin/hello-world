@@ -24,4 +24,5 @@ All other files deployed using the Jenkins job above are:
 
 NOTE: Any folder that has a file called Thumbs.db, will cause the Jenkins job to fail when doing the xcopy of the data.  Windows puts a hold in this file when on the OS.
 To find the guilty file run the copy command on the server, but you need to adjust the parameters so you can locate the error.
-xcopy 
+xcopy E:\sw_nt\jenkins\workspace\waops\fcbc_kml\kml\Icons\* \\<servername>\e$\inetpub\wwwroot\kml\Icons\*
+
