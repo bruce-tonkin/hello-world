@@ -19,3 +19,5 @@ All other files deployed using the Jenkins job above are:
 5. geomark - GeoMark
 
 6. Icons - common icons that are consumed by all the other kml files
+
+7. wildfire - There is a FME job somewhere, that populates this folder. Once we find the job and stop it, this folder can be removed as it is no longer used.
