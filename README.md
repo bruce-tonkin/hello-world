@@ -1,6 +1,6 @@
 This folder contains the KML files that are deployed to:  https://openmaps.gov.bc.ca/kml/...
 
-Deployment used a Jenkins Job: https://cis-delivery.apps.gov.bc.ca/int/job/waops/job/fcbc_kml/. 
+Deployment uses a Jenkins Job: https://cis-delivery.apps.gov.bc.ca/int/job/waops/job/fcbc_kml/. 
 
 All are custom build kml files by Michael Ross and/or Brian Kelsey
 
