@@ -1,4 +1,5 @@
 def targetNode = KML_ENV == "Production" ? 'geoserverprod' : 'geoservertest'
+def repositoryUrl = scm.userRemoteConfigs[0].url
 
 node (targetNode) {
   try {
@@ -58,8 +59,7 @@ node (targetNode) {
     echo "This is my echo with env.APP: ${env.APP}"
     echo "This is my echo with KML_gitTag: ${KML_gitTag}"
     echo "This is my target node: ${targetNode}"
-    echo "This is the repo path(scm.userRemoteConfigs[0].url): scm.userRemoteConfigs[0].url"
-    echo "This is the repo path(scm.locations[0].remote): ${scm.locations[0].remote}" 
+    echo "This is the repo node: ${repositoryUrl}"
     
     echo "Set variables that can be used in external processes"
     withEnv ([
