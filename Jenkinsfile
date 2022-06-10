@@ -1,5 +1,5 @@
 def targetNode = KML_ENV == "Production" ? 'geoserverprod' : 'geoservertest'
-def repositoryUrl = scm.userRemoteConfigs[0].url
+def repositoryUrl = scm.locations[0].remote
 
 node (targetNode) {
   try {
